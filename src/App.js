@@ -17,12 +17,10 @@ function App() {
           </ul>
         </nav>
       </header>
-      <main>
-
-      </main>
-      <footer>
-        
-      </footer>
+       <div className='main_content'>
+         <aside className='vertical_nav'></aside>
+         <main className='user_content'></main>
+       </div>
     </div>
   );
 }
