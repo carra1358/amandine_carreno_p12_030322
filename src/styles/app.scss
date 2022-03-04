@@ -1,8 +1,7 @@
-nav{
-    width: 76%;
-}
+
 
 .main_nav{
+     width: 76%;
     padding: 0;
     width: 100%;
     list-style: none;
@@ -50,3 +49,12 @@ nav{
     height: 100%;
      background-color: black;
     }
+
+.icons_vertical_nav{
+    width: 64px;
+    height: 64px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
