@@ -8,9 +8,6 @@ import Icon from './components/Icon';
 
 const iconsNav = [yoga,swim,bike,barbel]
 
-const keyIcons = ["yoga-icon","swim-icon","bike-icon","barbel-icon"]
-
-
 
 function App() {
   return (
@@ -19,8 +16,8 @@ function App() {
         <div className='logo_container'>
           <img src={logoSportsee} alt="Sport See"/>
         </div>
-        <nav className='main_nav'>
-          <ul>
+        <nav className='nav_container'>
+          <ul className='main_nav'>
             <li>Accueil</li>
             <li>Profil</li>
             <li>Réglage</li>
@@ -29,13 +26,13 @@ function App() {
         </nav>
       </header>
        <div className='main_content'>
-         <aside className='vertical_nav'>
+         <aside className='vertical_bar'>
            <nav className='second_nav'>
             {iconsNav.map((icon) => {
-              return <a><Icon src={icon} background="white" StyleName="icons_vertical_nav" key={keyIcons.map((key)=> key)}/></a>
+              return <a href='#' key={icon}><Icon src={icon} background="white" StyleName="icons_vertical_nav"/></a>
             } )}
-          
            </nav>
+           <span className='copyright_text'>Copyright, SportSee 2020</span>
          </aside>
          <main className='user_content'></main>
        </div>
