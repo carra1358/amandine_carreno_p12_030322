@@ -1,6 +1,7 @@
 @use "_greetings.scss";
 @use "_icon.scss";
 @use "_cards.scss";
+@use "_charts.scss";
 
 .nav_container{
     width: 76%;
@@ -86,7 +87,6 @@
 
 .user_graph_container{
 width:74%;
-height: 200px;
 color: rgb(6, 8, 8);
 }
 
