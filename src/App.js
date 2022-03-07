@@ -12,6 +12,7 @@ import fire from "./assets/icons/fire.png";
 import cheeseburger from "./assets/icons/cheeseburger.png";
 import chicken from "./assets/icons/chicken.png";
 import BarCharts from './components/BarCharts';
+import ScoreCharts from './components/ScoreCharts';
 
 const iconsNav = [yoga,swim,bike,barbel]
 
@@ -47,6 +48,14 @@ function App() {
            <div className='user_stats_container'>
              <div className='user_graph_container'>
                <BarCharts styleName="bar_chart"/>
+               <div className="user_small_grah_container">
+
+                 <ScoreCharts styleName="score_chart"/>
+                 <ScoreCharts styleName="score_chart"/>
+                 <ScoreCharts styleName="score_chart"/>
+
+
+               </div>
              </div>
             <div className='nutrition_container'>
               <Cards nutritionNumber="1234" unit="KCal" category="calories" src={fire} background="rgba(255, 0, 0, 0.061)" StyleName="icons icons_nutrition"></Cards>

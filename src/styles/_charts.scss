@@ -43,3 +43,39 @@
     font-size: 14px;
     color: #74798C;
 }
+
+.user_small_grah_container{
+    margin-top: 29px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.small_chart{
+ background: #FBFBFB;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0212249);
+border-radius: 5px;
+height: 263px;
+width: 258px;
+
+
+
+}
+
+.score_chart{
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: white;
+}
+.score_title{
+    margin: 0;
+    padding: 24px;
+    font-size: 15px;
+    width: 80%;
+}
+
+
