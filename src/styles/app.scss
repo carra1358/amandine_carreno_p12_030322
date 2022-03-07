@@ -1,5 +1,6 @@
 @use "_greetings.scss";
 @use "_icon.scss";
+@use "_cards.scss";
 
 .nav_container{
     width: 76%;
@@ -69,4 +70,26 @@
     margin-bottom: 164px;
     margin-top:59px ;
    
+}
+
+.user_content{
+    width: 100%;
+    margin-left: 10%;
+    
+    margin-top: 68px;
+}
+
+.user_stats_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.user_graph_container{
+width:74%;
+height: 200px;
+color: rgb(6, 8, 8);
+}
+
+.user_nutrition_container{
+    margin-right: 90px;
 }

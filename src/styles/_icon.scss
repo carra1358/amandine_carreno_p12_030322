@@ -1,9 +1,20 @@
-.icons_vertical_nav{
-    width: 64px;
-    height: 64px;
-    border-radius: 6px;
-    margin-bottom: 20px;
+.icons {
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 6px;
+}
+
+.icons_vertical_nav{
+    width: 64px;
+    height: 64px; 
+    margin-bottom: 20px;
+  
+}
+
+.icons_nutrition{
+    width: 60px;
+    height: 60px;
+    margin-right: 24px;
+    margin-left: 32px;
 }

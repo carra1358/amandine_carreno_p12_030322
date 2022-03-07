@@ -1,4 +1,17 @@
 
-.greettings_name{
-    color: red;
+.greetings{
+    h1{
+        font-size: 48px;
+       margin-bottom: 40px;
+    }
+    .greettings_name{ 
+        color: #FF0101;
+    }
+}
+
+
+
+.greetings_message{
+    margin: 0;
+    font-size: 18px ;
 }
