@@ -13,6 +13,7 @@ import cheeseburger from "./assets/icons/cheeseburger.png";
 import chicken from "./assets/icons/chicken.png";
 import BarCharts from './components/Charts/BarCharts';
 import ScoreCharts from './components/ScoreCharts';
+import RadarCharts from './components/RadarCharts';
 
 const iconsNav = [yoga,swim,bike,barbel]
 
@@ -51,7 +52,7 @@ function App() {
                <div className="user_small_grah_container">
 
                  <ScoreCharts styleName="score_chart"/>
-                 <ScoreCharts styleName="score_chart"/>
+                 <RadarCharts styleName="small_chart"/>
                  <ScoreCharts styleName="score_chart"/>
 
 
