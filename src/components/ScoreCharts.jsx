@@ -1,12 +1,13 @@
-import { RadialBarChart, RadialBar,PolarAngleAxis } from "recharts";
+import { RadialBarChart, RadialBar,PolarAngleAxis, Legend, ResponsiveContainer } from "recharts";
 
 const data = [
     {
-        score:0.12,
+        score:0.34,
     }
 ]
 
-const pourcentage = 0.12 * 100;
+
+
 
 function ScoreCharts ({styleName}){
 
@@ -14,15 +15,16 @@ function ScoreCharts ({styleName}){
       <div className="small_chart">
           <h3 className="score_title">Score</h3>
           <div className={styleName}>
-        <RadialBarChart
+              <ResponsiveContainer>
+              <RadialBarChart
         width={160}
         height={160}
         innerRadius="100%"
         outerRadius="100%"
         barSize={10}
         data={data}
-        startAngle={-210}
-         endAngle={360}
+        startAngle={210}
+         endAngle={-150}
        
         
         >
@@ -35,22 +37,19 @@ function ScoreCharts ({styleName}){
   />
   <RadialBar
   background={false}
-  clockWise
+  clockWise={true}
   dataKey="score"
+  orientation=""
   cornerRadius={87}
   fill="#FF0000"
   />
-    <text
-        x={80}
-        y={80}
-        textAnchor="middle"
-        dominantBaseline="central"
-        >
-       {pourcentage}% De votre objectif
-      </text>
+  <Legend verticalAlign="middle" align='center' iconType="circle" iconSize="0px" wrapperStyle={{ lineHeight: '25px'}} formatter={(value,entry,payload) => <span className="bar_chart_legend"><span className="bar_chart_legend_percent">{ new Intl.NumberFormat("en-IN", {style: "percent"}).format(entry.payload.value)}<br/></span> De votre objectif</span>}/>
 
 
   </RadialBarChart>
+
+              </ResponsiveContainer>
+        
  
       </div>
           </div>

@@ -70,12 +70,32 @@ width: 258px;
     height: 160px;
     border-radius: 50%;
     background-color: white;
+
+    ul{
+       li{
+        width: 70%;
+       }
+    }
 }
 .score_title{
     margin: 0;
     padding: 24px;
     font-size: 15px;
     width: 80%;
+}
+
+.bar_chart_legend_percent{
+    font-size: 26px;
+    font-weight: 700;
+    color:  #282D30;
+}
+
+.bar_chart_legend{
+    font-weight: 500;
+    font-size: 16px;
+
+  
+
 }
 
 

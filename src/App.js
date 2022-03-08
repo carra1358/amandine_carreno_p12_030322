@@ -11,7 +11,7 @@ import apple from "./assets/icons/apple.png";
 import fire from "./assets/icons/fire.png";
 import cheeseburger from "./assets/icons/cheeseburger.png";
 import chicken from "./assets/icons/chicken.png";
-import BarCharts from './components/BarCharts';
+import BarCharts from './components/Charts/BarCharts';
 import ScoreCharts from './components/ScoreCharts';
 
 const iconsNav = [yoga,swim,bike,barbel]
