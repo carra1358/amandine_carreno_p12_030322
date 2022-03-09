@@ -29,20 +29,29 @@ const data = [
 
         ]
 
+   const tickFormatter = (tick) => {
+    const uppercaseTick = tick.replace(/(?:^|\s|[-"'([{])+\S/g, (c) => c.toUpperCase())
+    return uppercaseTick
+   } 
+
 function RadarCharts ({styleName}){
 
     return (
-        <div className={styleName + " radar_chart"}>
+        <div className={styleName}>
 
-       
-            <ResponsiveContainer width="100%" height="100%">
-        <RadarChart data={data} outerRadius="180px">
+      
+         <ResponsiveContainer width="100%" height="100%">
+        <RadarChart  cx="50%" cy="50%" data={data}  outerRadius="60%" >
           <PolarGrid radialLines={false}  />
-          <PolarAngleAxis dataKey="kind"  tick={{fill: "#FFFFFF"}}  />
+          <PolarAngleAxis dataKey="kind"  tick={{fill: "#FFFFFF", fontSize:"0.65rem"}}  tickSize={12} tickFormatter={tickFormatter}  />
           <PolarRadiusAxis  stroke='none'/>
           <Radar name="user" dataKey="value" stroke="none" fill="#FF0101B2" fillOpacity={0.7} />
+          
         </RadarChart>
       </ResponsiveContainer>
+
+         
+   
      
             
            

@@ -52,7 +52,7 @@ function App() {
                <div className="user_small_grah_container">
 
                  <ScoreCharts styleName="score_chart"/>
-                 <RadarCharts styleName="small_chart"/>
+                 <RadarCharts styleName="radar_chart"/>
                  <ScoreCharts styleName="score_chart"/>
 
 
