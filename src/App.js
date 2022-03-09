@@ -14,6 +14,7 @@ import chicken from "./assets/icons/chicken.png";
 import BarCharts from './components/Charts/BarCharts';
 import ScoreCharts from './components/ScoreCharts';
 import RadarCharts from './components/RadarCharts';
+import SessionsCharts from './components/SessionsCharts';
 
 const iconsNav = [yoga,swim,bike,barbel]
 
@@ -51,7 +52,7 @@ function App() {
                <BarCharts styleName="bar_chart"/>
                <div className="user_small_grah_container">
 
-                 <ScoreCharts styleName="score_chart"/>
+                 <SessionsCharts styleName="session_chart"/>
                  <RadarCharts styleName="radar_chart"/>
                  <ScoreCharts styleName="score_chart"/>
 
