@@ -109,12 +109,20 @@ width: 258px;
 }
 
 .session_chart{
-    display: flex;
-    justify-content: flex-end;
-    background-color:#E60000;
+    border-radius: 5px;
+    height: 263px;
+     width: 258px;
+     background-color: #E60000;
     color:#FBFBFB;
 }
 
+.custom-tooltip_session{
+    background-color: white;
+    font-weight: 500;
+    color: #20253A;
+    font-size: 12px;
+    padding: 2px;
+}
 
 
 
