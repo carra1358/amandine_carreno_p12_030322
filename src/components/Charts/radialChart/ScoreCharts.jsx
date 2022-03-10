@@ -1,3 +1,5 @@
+import "./radial_chart.scss"
+import Styles from "./small_chart.module.scss"
 import { RadialBarChart, RadialBar,PolarAngleAxis, Legend, ResponsiveContainer } from "recharts";
 
 const data = [
@@ -9,13 +11,13 @@ const data = [
 
 
 
-function ScoreCharts ({styleName}){
+function ScoreCharts (){
 
   return (
-      <div className="small_chart">
+      <div className={"small_chart " + Styles.small_chart}>
           <h3 className="score_title">Score</h3>
-          <div className={styleName}>
-              <ResponsiveContainer>
+          <div className="score_chart">
+              <ResponsiveContainer width="100%" height="100%">
               <RadialBarChart
         width={160}
         height={160}

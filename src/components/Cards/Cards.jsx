@@ -1,4 +1,5 @@
-import Icon from "./Icon";
+import Icon from "../Icons/Icon";
+import "./cards.scss"
 
 
 function Cards({nutritionNumber,unit,category,src,background,StyleName}){

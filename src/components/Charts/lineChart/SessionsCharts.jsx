@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import "./line_chart.scss";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const data = [{"day":1,"sessionLength":30},{"day":2,"sessionLength":23},{"day":3,"sessionLength":45},{"day":4,"sessionLength":50},{"day":5,"sessionLength":0},{"day":6,"sessionLength":0},{"day":7,"sessionLength":60}]
@@ -45,10 +45,10 @@ const CustomTooltip = ({ active, payload}) => {
   
 
 
-function SessionsCharts ({styleName}) {
+function SessionsCharts () {
 
     return (
-        <div className={styleName} >
+        <div className={"small_chart"} >
 
             <div  className='session_chart_div' style={{width:"100%", height:"100%", background:"#FF0000", borderRadius:"5px"}}>
             <ResponsiveContainer width="100%" height="100%">
