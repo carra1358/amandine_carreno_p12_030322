@@ -1,28 +1,30 @@
-import './styles/app.scss';
-import logoSportsee from "./assets/logo_sportsee.png"
+import "./styles/app.scss";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import Main from "./components/Main/Main";
+import { UserContextProvider } from "./DataProvider";
+
+
+
+
 
 function App() {
+
+
   return (
-    <div>
-      <header className="app_header">
-        <div className='logo_container'>
-          <img src={logoSportsee} alt="Sport See"/>
-        </div>
-        <nav>
-          <ul className='main_nav'>
-            <li className='nav_item'>Accueil</li>
-            <li>Profil</li>
-            <li>Réglage</li>
-            <li>Communauté</li>
-          </ul>
-        </nav>
-      </header>
-       <div className='main_content'>
-         <aside className='vertical_nav'></aside>
-         <main className='user_content'></main>
-       </div>
+    <UserContextProvider>
+        <div>
+      <Header />
+      <div className="main_content">
+        <Main />
+        <Footer />
+      </div>
     </div>
+  </UserContextProvider>
+  
   );
 }
 
 export default App;
+
+
