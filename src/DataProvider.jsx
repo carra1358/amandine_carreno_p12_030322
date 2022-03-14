@@ -15,13 +15,28 @@ const urlParams = useParams()
           // for example
              // this would usually be your own backend, or localStorage
           // for example
-          
+          /** 
           fetch(`http://localhost:3000/user/${urlParams.id}`)
             .then((response) => response.json())
             //.then((data) => console.log(data.data))
             .then((result) => setUser(result.data))
             .catch((error) => console.log(error));
 
+*/        
+         const userCall = fetch(`http://localhost:3000/user/${urlParams.id}`)
+         const performanceCall = fetch(`http://localhost:3000/user/${urlParams.id}/performance`)
+
+          Promise.all([userCall, performanceCall])
+         .then(responses => Promise.all(responses.map(reponse => reponse.json())))
+         .then(data => data)
+         .then(data => {
+             const combinedData = [data[0].data,data[1].data]
+             let performance = data[1].data
+           //  console.log(user,performance)
+             return setUser(combinedData)
+         })
+         //.then(data => console.log(data[0].data))
+         .catch(() => console.log("Oopps"))
 
         };
     

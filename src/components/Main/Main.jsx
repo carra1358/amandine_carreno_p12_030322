@@ -18,11 +18,10 @@ function Main() {
  
     const user = useContext(UserContext)
 
-    console.log(user)
-
+    console.log(user[0].userInfos.firstName)
   return (
     <main className="user_content">
-      <Greetings name={"tom"} />
+      <Greetings name={user[0].userInfos.firstName} />
       <div className="user_stats">
         <div className="all_charts_container">
           <BarCharts />
