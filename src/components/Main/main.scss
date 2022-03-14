@@ -31,8 +31,12 @@
 }
 
 .all_charts_container{
-width:75%;
-color: rgb(6, 8, 8);
+
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   width:74%;
+   color: rgb(6, 8, 8);
 
 }
 
@@ -40,14 +44,13 @@ color: rgb(6, 8, 8);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 20%;
+    width: 23%;
     height: 67vh;
 }
 
 .small_charts_container{
     width: 100%;
     height: 30vh;
-    background-color: aqua;
     margin-top: 29px;
     display: flex;
     align-items: center;
@@ -55,7 +58,7 @@ color: rgb(6, 8, 8);
 }
 
 .small_chart{
-    width: 25%;
+    width: 30%;
     height: 100%;
     border-radius: 6px;
 

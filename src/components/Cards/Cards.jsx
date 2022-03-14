@@ -8,7 +8,7 @@ function Cards({nutritionNumber,unit,category,src,background,StyleName}){
         <div className="cards">
           <Icon src={src} background={background} StyleName={StyleName} alt=" "></Icon>
            <div className="user_nutrition">
-               <p>{nutritionNumber < 1000 ? nutritionNumber  : nutritionNumber.split("")[0]+","+nutritionNumber.split("").slice(1).join("")}{unit}</p>
+               <p>{new Intl.NumberFormat('en-IN').format(nutritionNumber)}{unit}</p>
                <p>{category}</p>
 
            </div> 

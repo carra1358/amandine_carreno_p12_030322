@@ -9,11 +9,20 @@ import SessionsCharts from "../Charts/lineChart/SessionsCharts";
 import RadarCharts from "../Charts/radarChart/RadarCharts";
 import ScoreCharts from "../Charts/radialChart/ScoreCharts";
 import Cards from "../Cards/Cards";
+import Styles from "../Icons/icon_card.module.scss"
+import { UserContextProfider, UserContext } from "../../DataProvider";
+import { useContext } from "react";
+
 
 function Main() {
+ 
+    const user = useContext(UserContext)
+
+    console.log(user)
+
   return (
     <main className="user_content">
-      <Greetings name={"Thomas"} />
+      <Greetings name={"tom"} />
       <div className="user_stats">
         <div className="all_charts_container">
           <BarCharts />
@@ -30,7 +39,7 @@ function Main() {
               category="calories"
               src={fire}
               background="rgba(255, 0, 0, 0.061)"
-              StyleName="icons icons_nutrition"
+              StyleName={Styles.icons}
             ></Cards>
             <Cards
               nutritionNumber="123"
@@ -38,7 +47,7 @@ function Main() {
               category="Proteines"
               src={chicken}
               background="rgba(74, 184, 255, 0.1)"
-              StyleName="icons icons_nutrition"
+              StyleName={Styles.icons}
             ></Cards>
             <Cards
               nutritionNumber="300"
@@ -46,7 +55,7 @@ function Main() {
               category="Glucides"
               src={apple}
               background="rgba(249, 206, 35, 0.1)"
-              StyleName="icons icons_nutrition"
+              StyleName={Styles.icons}
             ></Cards>
             <Cards
               nutritionNumber="50"
@@ -54,7 +63,7 @@ function Main() {
               category="Lipides"
               src={cheeseburger}
               background="rgba(253, 81, 129, 0.1)"
-              StyleName="icons icons_nutrition"
+              StyleName={Styles.icons}
             ></Cards>
           </div>
       </div>
@@ -63,3 +72,8 @@ function Main() {
 }
 
 export default Main;
+
+
+
+
+  
