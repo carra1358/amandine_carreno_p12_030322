@@ -1,5 +1,5 @@
 import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
-import Styles from "./small_chart.module.scss"
+import "./radar_chart.scss";
 
 const data = [
         
@@ -38,7 +38,7 @@ const data = [
 function RadarCharts (){
 
     return (
-        <div className={"small_chart "+ Styles.small_chart}>
+        <div className={"small_chart small_chart_radar"}>
 
       
          <ResponsiveContainer width="100%" height="100%">

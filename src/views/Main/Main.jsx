@@ -1,16 +1,15 @@
 import "./main.scss";
-import fire from "./assets/fire.png";
-import chicken from "./assets/chicken.png";
-import apple from "./assets/apple.png";
-import cheeseburger from "./assets/cheeseburger.png";
+import fire from "assets/icons_nutrition/fire.png";
+import chicken from "assets/icons_nutrition/chicken.png";
+import apple from "assets/icons_nutrition/apple.png";
+import cheeseburger from "assets/icons_nutrition/cheeseburger.png";
 import Greetings from "./Greetings";
-import BarCharts from "../Charts/barChart/BarCharts";
-import SessionsCharts from "../Charts/lineChart/SessionsCharts";
-import RadarCharts from "../Charts/radarChart/RadarCharts";
-import ScoreCharts from "../Charts/radialChart/ScoreCharts";
-import Cards from "../Cards/Cards";
-import Styles from "../Icons/icon_card.module.scss"
-import { UserContextProfider, UserContext } from "../../DataProvider";
+import BarCharts from "components/Charts/barChart/BarCharts";
+import SessionsCharts from "components/Charts/lineChart/SessionsCharts";
+import RadarCharts from "components/Charts/radarChart/RadarCharts";
+import ScoreCharts from "components/Charts/radialChart/ScoreCharts";
+import Cards from "components/Cards/Cards";
+import { UserContext } from "DataProvider";
 import { useContext } from "react";
 
 
@@ -18,10 +17,12 @@ function Main() {
  
     const user = useContext(UserContext)
 
-    console.log(user[0].userInfos.firstName)
+   // const userName = user[0].userInfos.firstName
+
+   
   return (
     <main className="user_content">
-      <Greetings name={user[0].userInfos.firstName} />
+      <Greetings name={"thomas"} />
       <div className="user_stats">
         <div className="all_charts_container">
           <BarCharts />
@@ -38,7 +39,7 @@ function Main() {
               category="calories"
               src={fire}
               background="rgba(255, 0, 0, 0.061)"
-              StyleName={Styles.icons}
+              StyleName="icons_nutrition"
             ></Cards>
             <Cards
               nutritionNumber="123"
@@ -46,7 +47,7 @@ function Main() {
               category="Proteines"
               src={chicken}
               background="rgba(74, 184, 255, 0.1)"
-              StyleName={Styles.icons}
+              StyleName="icons_nutrition"
             ></Cards>
             <Cards
               nutritionNumber="300"
@@ -54,7 +55,7 @@ function Main() {
               category="Glucides"
               src={apple}
               background="rgba(249, 206, 35, 0.1)"
-              StyleName={Styles.icons}
+              StyleName="icons_nutrition"
             ></Cards>
             <Cards
               nutritionNumber="50"
@@ -62,7 +63,8 @@ function Main() {
               category="Lipides"
               src={cheeseburger}
               background="rgba(253, 81, 129, 0.1)"
-              StyleName={Styles.icons}
+              StyleName="icons_nutrition"
+
             ></Cards>
           </div>
       </div>

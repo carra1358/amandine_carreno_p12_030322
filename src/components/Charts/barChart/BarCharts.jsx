@@ -66,7 +66,7 @@ const data = [
   },
 ];
 
-function BarCharts({ styleName }) {
+function BarCharts() {
   const monthTickFormatter = (tick) => {
     const date = new Date(tick);
     return date.getDate();

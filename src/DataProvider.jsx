@@ -31,7 +31,6 @@ const urlParams = useParams()
          .then(data => data)
          .then(data => {
              const combinedData = [data[0].data,data[1].data]
-             let performance = data[1].data
            //  console.log(user,performance)
              return setUser(combinedData)
          })

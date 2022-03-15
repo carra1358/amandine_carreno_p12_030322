@@ -9,7 +9,8 @@ ReactDOM.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route path="/:id" element={<App />} />
+      
+       <Route path="/:id" element={<App />} />
       </Routes>
     </Router>
   </React.StrictMode>,

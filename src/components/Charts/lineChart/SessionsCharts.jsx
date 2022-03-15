@@ -1,6 +1,6 @@
 import "./line_chart.scss";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { PureComponent } from "react";
+import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+
 
 const data = [{"day":1,"sessionLength":23},{"day":2,"sessionLength":0},{"day":3,"sessionLength":56},{"day":4,"sessionLength":34},{"day":5,"sessionLength":67},{"day":6,"sessionLength":100},{"day":7,"sessionLength":4}]
 
@@ -65,7 +65,7 @@ function SessionsCharts () {
            <LineChart  data={data} onMouseMove={trackMouse} margin={0} >
                <Legend  verticalAlign="top" align="middle" formatter={legendFormatter} iconSize={0}/>
                <Tooltip content={customTooltip} cursor={false}></Tooltip>
-           <YAxis domain={[-10,160]} axisLine={false} tick={false} tick={false} width={0}/>
+           <YAxis domain={[-10,160]} axisLine={false} tick={false} width={0}/>
           <XAxis dataKey="day"  axisLine={false}  tickLine={false}  tick={{fontSize:"12px", fill:"#FFFF", fontWeight:"500"}}  tickFormatter={tickFormatter} interval="preserveStartEnd"/>
           <Line type="natural"  dataKey="sessionLength" stroke="#FFFF" strokeWidth={2} dot={false} activeDot={{fill:"#FFFF"} } />
         </LineChart>

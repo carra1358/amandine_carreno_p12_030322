@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import logoSportsee from "./assets/logo_sportsee.png";
+import logoSportsee from "assets/logo/logo_sportsee.png";
 import "./header.scss";
 
 function Header() {
