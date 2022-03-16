@@ -1,16 +1,22 @@
 import "./radial_chart.scss"
 import { RadialBarChart, RadialBar,PolarAngleAxis, Legend, ResponsiveContainer } from "recharts";
 
-const data = [
-    {
-        score:0.34,
-    }
-]
 
 
 
 
-function ScoreCharts (){
+
+
+function ScoreCharts ({data}){
+
+     
+
+    const dataToUse = [
+        {
+            score: data.todayScore ? data.todayScore : data.score,
+        }
+    ]
+
 
   return (
       <div className={"small_chart  small_chart_score"}>
@@ -23,7 +29,7 @@ function ScoreCharts (){
         innerRadius="100%"
         outerRadius="100%"
         barSize={10}
-        data={data}
+        data={dataToUse}
         startAngle={210}
          endAngle={-150}
        

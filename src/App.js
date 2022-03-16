@@ -3,7 +3,10 @@ import "components/Icons/icons.scss"
 import Header from "views/Header/Header";
 import Footer from "views/Footer/Footer";
 import Main from "views/Main/Main";
-import { UserContextProvider} from "DataProvider";
+import { UserContextProvider } from "ContextProvider";
+
+
+
 
 
 
@@ -14,7 +17,7 @@ import { UserContextProvider} from "DataProvider";
 function App() {
 
   return (
-    <UserContextProvider>
+       <UserContextProvider>
         <div>
       <Header />
       <div className="main_content">
@@ -22,7 +25,7 @@ function App() {
         <Footer />
       </div>
     </div>
-  </UserContextProvider>
+</UserContextProvider>
   
   );
 }

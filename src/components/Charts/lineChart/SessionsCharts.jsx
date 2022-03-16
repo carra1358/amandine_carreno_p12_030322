@@ -2,7 +2,6 @@ import "./line_chart.scss";
 import { LineChart, Line, XAxis, YAxis, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 
-const data = [{"day":1,"sessionLength":23},{"day":2,"sessionLength":0},{"day":3,"sessionLength":56},{"day":4,"sessionLength":34},{"day":5,"sessionLength":67},{"day":6,"sessionLength":100},{"day":7,"sessionLength":4}]
 
 const tickFormatter = (tick) => {
   const  weekDays = ["  L","M","M","J","V","S","D  "];
@@ -55,7 +54,8 @@ const customTooltip = ({ active, payload}) => {
   
 
 
-function SessionsCharts () {
+function SessionsCharts ({data}) {
+
 
     return (
         <div className={"small_chart"} >
