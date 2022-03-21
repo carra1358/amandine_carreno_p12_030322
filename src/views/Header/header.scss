@@ -1,6 +1,7 @@
 
 .nav_container{
     width: 70%;
+    margin-right: 5%;
 }
 
 .main_nav{
@@ -23,8 +24,9 @@
 .app_header{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
-    padding: 1em;
+    padding: 1em 0 1em 0;
     background-color: black;
 }
 

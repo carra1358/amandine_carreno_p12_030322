@@ -29,14 +29,15 @@ function Main() {
         <main className="user_content">
           <Greetings name={user.summary.userInfos.firstName} />
           <div className="user_stats">
-            <div className="all_charts_container">
-              <BarCharts data={user.activity.sessions}/>
-              <div className="small_charts_container">
-                <SessionsCharts data={user.averageSession.sessions}/>
-                <RadarCharts data={user.performance}/>
-                <ScoreCharts data={user.summary}/>
+          <div className="all_charts_container">
+             <BarCharts data={user.activity.sessions}/>
+             <div className="small_charts_container">
+              <SessionsCharts data={user.averageSession.sessions}/>
+              <RadarCharts data={user.performance}/>
+              <ScoreCharts data={user.summary}/>
               </div>
             </div>
+         
             <div className="user_nutrition_container">
                 <Cards
                   nutritionNumber={user.summary.keyData.calorieCount}

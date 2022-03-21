@@ -1,7 +1,8 @@
 .bar_chart{
-    padding: 2%;
+    padding: 4% 2% 1% 4%;
     position: relative;
-    width: 96%;
+    width: 94%;
+    height: 40%;
     background-color: #FBFBFB;
     border-radius: 5px;
     z-index: 0;
@@ -9,8 +10,8 @@
 
 .bar_chart_title{
     position: absolute;
-    top : 0.5em;
-    left: 2vh;
+    top : 4%;
+    left: 4%;
     width: 50%;
     font-weight: 500;
     font-size: 15px;

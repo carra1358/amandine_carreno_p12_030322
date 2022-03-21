@@ -1,4 +1,11 @@
 
+.main_content{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+
 .greetings{
     margin-bottom: 1.2em;
     h1{
@@ -20,14 +27,14 @@
 
 
 .user_content{
-    width: 100%;
-    margin-left: 2em;    
-    margin-right: 4%;
+    width: 84%; 
+    margin-right: 3%;
 }
 
 .user_stats{
     display: flex;
     justify-content: space-between;
+    
 }
 
 .all_charts_container{
@@ -35,7 +42,7 @@
    display: flex;
    flex-direction: column;
    justify-content: space-between;
-   width:74%;
+   width: 74%;
    color: rgb(6, 8, 8);
 
 }
@@ -44,24 +51,26 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: flex-end;
     width: 23%;
-    height: 67vh;
 }
 
 .small_charts_container{
     width: 100%;
-    height: 30vh;
-    margin-top: 29px;
+    height: 263px;
+    margin-top: 5%;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 }
 
 .small_chart{
-    width: 30%;
+    width: 32%;
     height: 100%;
     border-radius: 6px;
 
 }
+
+
 
 

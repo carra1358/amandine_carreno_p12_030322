@@ -19,19 +19,18 @@ function ScoreCharts ({data}){
 
 
   return (
-      <div className={"small_chart  small_chart_score"}>
+      <div className={"small_chart  small_chart_radial"}>
           <h3 className="score_title">Score</h3>
           <div className="score_chart">
               <ResponsiveContainer width="100%" height="100%">
               <RadialBarChart
-        width={160}
-        height={160}
+      
         innerRadius="100%"
         outerRadius="100%"
         barSize={10}
         data={dataToUse}
-        startAngle={210}
-         endAngle={-150}
+        startAngle={205}
+         endAngle={-155}
        
         
         >

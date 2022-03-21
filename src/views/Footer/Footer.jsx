@@ -14,15 +14,15 @@ function Footer () {
   
     return (
 
-        <div className='vertical_bar'>
+        <footer className='vertical_bar'>
             <nav className='second_nav'>
              {iconsNav.map((icon) => {
-               return <a href='#' key={icon}><Icon src={icon} background="white" StyleName="icons_activity"/></a>
+               return <a href='/' key={icon}><Icon src={icon} background="white" StyleName="icons_activity"/></a>
              } )}
             </nav>
             <span className='copyright_text'>Copyright, SportSee 2020</span>
       
-          </div>
+          </footer>
     )
 }
 
