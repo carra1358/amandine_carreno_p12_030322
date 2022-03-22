@@ -18,9 +18,9 @@ function Main() {
     const user = useContext(UserContext)
 
  
-    console.log(user)
+     console.log(user)
 
-    if(user === null){
+    if(user.summary === null || user.activity === null || user.performance === null || user.averageSession === null ){
 
       return( <div>Chargement</div>)
 
@@ -37,6 +37,7 @@ function Main() {
               <ScoreCharts data={user.summary}/>
               </div>
             </div>
+            
          
             <div className="user_nutrition_container">
                 <Cards
@@ -74,6 +75,9 @@ function Main() {
                 ></Cards>
               </div>
           </div>
+          
+          
+       
         </main>
       );
 

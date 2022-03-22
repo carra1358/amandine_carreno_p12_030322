@@ -55,18 +55,20 @@ const customTooltip = ({ active, payload}) => {
 
 function SessionsCharts ({data}) {
 
+    
+
 
     return (
         <div className={"small_chart"} >
 
             <div  className='session_chart_div' style={{width:"100%", height:"100%", background:"#FF0000", borderRadius:"5px"}}>
             <ResponsiveContainer width="100%" height="100%">
-           <LineChart  data={data} onMouseMove={trackMouse} margin={0} >
+           <LineChart  data={data} onMouseMove={trackMouse} margin={{top: 0, right: 0, left: 0, bottom: 25}} >
                <Legend  verticalAlign="top" align="middle" formatter={legendFormatter} iconSize={0}/>
                <Tooltip content={customTooltip} cursor={false}></Tooltip>
-           <YAxis domain={[0,160]} axisLine={false} tick={false} width={0}/>
-          <XAxis dataKey="day"  axisLine={false}  tickLine={false}  tick={{fontSize:"12px", fill:"#FFFF", fontWeight:"500"}}  tickFormatter={tickFormatter} interval="preserveStartEnd"/>
-          <Line type="natural"  dataKey="sessionLength" stroke="#FFFF" strokeWidth={2} dot={false} activeDot={{fill:"#FFFF"} } />
+           <YAxis domain={[1-160]}  axisLine={false} tick={false} width={0}  />
+          <XAxis dataKey="day"   axisLine={false}  tickLine={false} tickMargin={22} tick={{fontSize:"12px", fill:"#FFFF", fontWeight:"500"}}  tickFormatter={tickFormatter} interval="preserveStartEnd" />
+          <Line type="natural"  dataKey="sessionLength" stroke="#FFFF"  strokeWidth={2}  dot={false} activeDot={{fill:"#FFFF"} } />
         </LineChart>
       </ResponsiveContainer>
             </div>

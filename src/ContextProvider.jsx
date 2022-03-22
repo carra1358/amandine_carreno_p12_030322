@@ -1,6 +1,10 @@
-import { createContext, useState, useEffect } from "react";
-import { userRequests} from "requests"
-import { useParams } from "react-router-dom";
+import { createContext} from "react";
+import useFetch from "hooks/useFetch";
+
+
+
+
+
 
 
 const UserContext = createContext();
@@ -9,30 +13,23 @@ const UserContext = createContext();
 
 const UserContextProvider = ({children}) => {
     
-  
+
+const id = "12";
+
+const  summary = useFetch(id)
+const performance= useFetch(`${id}/performance`)
+const activity = useFetch(`${id}/activity`)
+const averageSession = useFetch(`${id}/average-sessions`)
+
    
-const urlParams = useParams()
 
- 
-const [user , setUser] = useState(null)
+  const user = {
+    summary : summary ,
+    performance: performance,
+    activity: activity,
+    averageSession: averageSession,
+  }
 
-    useEffect(() => {
-        const fetchUser = () => {
-          
-          if(user === null){
-           return userRequests(urlParams.id).then((response)=> setUser(response)) 
-          }
-
-          window.addEventListener('locationchange', () => {
-            return userRequests(urlParams.id).then((response)=> setUser(response))
-            
-           })
-       
-
-        }; 
-    
-        fetchUser();
-      }, []);  
     
       return (
         // the Provider gives access to the context to its children
@@ -45,3 +42,6 @@ const [user , setUser] = useState(null)
 }
 
 export { UserContext, UserContextProvider };
+
+
+
