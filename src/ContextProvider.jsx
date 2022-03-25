@@ -1,47 +1,30 @@
-import { createContext} from "react";
-import useFetch from "hooks/useFetch";
+import { createContext } from 'react';
+import useFetch from 'hooks/useFetch';
 
-
-
-
-
-
+/**
+ * Create global context to share data
+ *
+ * @return Components with props value that contains data fecthed from api
+ */
 
 const UserContext = createContext();
 
+const UserContextProvider = ({ children }) => {
+  let id = '18'; // id of the user in api
 
-
-const UserContextProvider = ({children}) => {
-    
-
-const id = "12";
-
-const  summary = useFetch(id)
-const performance= useFetch(`${id}/performance`)
-const activity = useFetch(`${id}/activity`)
-const averageSession = useFetch(`${id}/average-sessions`)
-
-   
+  const summary = useFetch(id);
+  const performance = useFetch(`${id}/performance`);
+  const activity = useFetch(`${id}/activity`);
+  const averageSession = useFetch(`${id}/average-sessions`);
 
   const user = {
-    summary : summary ,
+    summary: summary,
     performance: performance,
     activity: activity,
     averageSession: averageSession,
-  }
+  };
 
-    
-      return (
-        // the Provider gives access to the context to its children
-        <UserContext.Provider value={user}>
-          {children}
-        </UserContext.Provider>
-      );
-
-
-}
+  return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
+};
 
 export { UserContext, UserContextProvider };
-
-
-

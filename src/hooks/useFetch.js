@@ -1,31 +1,28 @@
-import {  useState, useEffect } from "react";
-import instance from "api/get"
+import { useState, useEffect } from 'react';
+import instance from 'api/get';
 
-function useFetch (url)  {
+/** Custom hook to fetch data and store then in a variable
+ *
+ * @param {string} url
+ * @returns object
+ */
 
-  const [state , setState] = useState(null)
-  
+function useFetch(url) {
+  const [state, setState] = useState(null);
 
-    useEffect(() => {
-
-        const fetchUser = async() => {
-        try{
-          const response = await (instance.get(url))
-          return setState(response.data.data)
-        }catch(error){ console.log(error)}
-       
-       
-      }    
+  useEffect(() => {
+    const fetchUser = async () => {
+      try {
+        const response = await instance.get(url);
+        return setState(response.data.data);
+      } catch (error) {
+        ('Ooops');
+      }
+    };
     fetchUser();
-    }, [url]);  
+  }, [url]);
 
-    return state
-
+  return state;
 }
 
-
-
-
-
 export default useFetch;
-

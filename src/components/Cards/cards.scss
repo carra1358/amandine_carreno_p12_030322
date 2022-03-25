@@ -1,47 +1,34 @@
-.cards{
-    width: 100%;
-    height: 20%;
-    border-radius: 5px;  
-    background-color: #FBFBFB;
-    display: flex;
-    align-items: center;
-    
-   
+.cards {
+  width: 100%;
+  height: 20%;
+  border-radius: 5px;
+  background-color: #fbfbfb;
+  display: flex;
+  align-items: center;
 }
 
-.user_nutrition{
+.user_nutrition {
+  p:first-child {
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0;
+  }
 
-    p:first-child{
-        font-weight: 700;
-        font-size: 20px;
-        margin: 0;
-
-    }
-
-    p:last-child{
-        color:  #74798C;
-        font-size: 14px;
-        margin: 0;
-    }
-
+  p:last-child {
+    color: #74798c;
+    font-size: 14px;
+    margin: 0;
+  }
 }
 
-@media screen  and (max-width: 1120px){
-
-    .user_nutrition{
-
-        p:first-child{
-            font-size: 18px;
-    
-        }
-    
-        p:last-child{
-            font-size: 16px;
-  
-        }
-    
+@media screen and (max-width: 1120px) {
+  .user_nutrition {
+    p:first-child {
+      font-size: 18px;
     }
 
-
-    
+    p:last-child {
+      font-size: 16px;
+    }
+  }
 }

@@ -1,9 +1,24 @@
-import "./icons.scss";
+import './icons.scss';
 
-function Icon({ src,background,alt,StyleName}) {
+/**
+ * React class component
+ *
+ * @param {string} src link to icon picture
+ * @param {string} background icon's background color
+ * @param {string} alt alternative text
+ * @param {string} StyleName icon className
+ *
+ *@returns icon
+ */
 
-  return <div style={{backgroundColor:background}}  className={"icons " +StyleName}>
+function Icon({ src, background, alt, StyleName }) {
+  return (
+    <div
+      style={{ backgroundColor: background }}
+      className={'icons ' + StyleName}
+    >
       <img src={src} alt={alt}></img>
-  </div>;
+    </div>
+  );
 }
 export default Icon;

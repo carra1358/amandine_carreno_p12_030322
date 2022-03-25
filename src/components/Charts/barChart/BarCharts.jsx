@@ -1,5 +1,4 @@
-import "./bar_chart.scss";
-
+import './bar_chart.scss';
 
 import {
   BarChart,
@@ -10,11 +9,9 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-} from "recharts";
+} from 'recharts';
 
-
-
-function BarCharts({data}) {
+function BarCharts({ data }) {
   const monthTickFormatter = (tick) => {
     const date = new Date(tick);
     return date.getDate();
@@ -24,7 +21,7 @@ function BarCharts({data}) {
     if (active) {
       return (
         <div className="custom-tooltip">
-          <p>{`${payload[0].value}`}kg </p>
+          <p>{`${payload[0].value}`}kg</p>
           <p>{`${payload[1].value}`}Kcal</p>
         </div>
       );
@@ -45,14 +42,14 @@ function BarCharts({data}) {
             axisLine={false}
             tickLine={false}
             tickSize={16}
-            tick={{ fill: "#9B9EAC", fontSize: 14 }}
+            tick={{ fill: '#9B9EAC', fontSize: 14 }}
           />
           <YAxis
             orientation="right"
             axisLine={false}
             tickLine={false}
             tickSize={24}
-            tick={{ fill: "#9B9EAC", fontSize: 14 }}
+            tick={{ fill: '#9B9EAC', fontSize: 14 }}
           />
           <Tooltip content={CustomTooltip} />
           <Legend
@@ -60,12 +57,12 @@ function BarCharts({data}) {
             align="right"
             iconType="circle"
             iconSize="8px"
-            wrapperStyle={{ top:0, paddingBottom:"2em"}}
+            wrapperStyle={{ top: 0, paddingBottom: '2em' }}
             formatter={(value) => (
               <span className="bar_chart_legend">
-                {value === "kilogram"
-                  ? (value = "Poids(kg)")
-                  : (value = "Calories(kcal)")}
+                {value === 'kilogram'
+                  ? (value = 'Poids(kg)')
+                  : (value = 'Calories(kcal)')}
               </span>
             )}
           />

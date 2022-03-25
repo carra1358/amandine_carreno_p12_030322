@@ -1,28 +1,28 @@
-.small_chart_radar{
-   
-    background-color: #20253A;
+.small_chart_radar {
+  background-color: #20253a;
 }
 
-.radar_chart{
-    width: 96%;
-    height: 98%;
-    margin: 2%;
-
-    
-    text{
-        margin: 10px;
-        font-size: 12px;
-    }
-    
+.tick_radar {
+  fill: #ffff;
+  text-anchor: middle;
+  font-size: 12px;
 }
 
-@media screen  and (max-width: 1120px){
+.radar_chart {
+  width: 96%;
+  height: 98%;
+  margin: 1%;
+}
+.tick_radar {
+  text {
+    font-size: 1em;
+  }
+}
 
-    .radar_chart{
-        
-        text{
-            font-size: 9px;
-        }
+@media screen and (max-width: 1030px) {
+  .tick_radar {
+    text {
+      font-size: 0.5em;
     }
-    
+  }
 }
