@@ -1,5 +1,4 @@
-import "./bar_chart.scss";
-
+import './bar_chart.scss';
 
 import {
   BarChart,
@@ -10,63 +9,9 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-} from "recharts";
+} from 'recharts';
 
-const data = [
-  {
-    day: "2020-03-01",
-    kilogram: 80,
-    calories: 200,
-  },
-  {
-    day: "2020-03-02",
-    kilogram: 80,
-    calories: 20,
-  },
-  {
-    day: "2020-03-03",
-    uv: 2000,
-    kilogram: 79,
-    calories: 250,
-  },
-  {
-    day: "2020-03-04",
-    kilogram: 78,
-    calories: 2,
-  },
-  {
-    day: "2020-03-05",
-    kilogram: 78,
-    calories: 256,
-  },
-  {
-    day: "2020-03-06",
-    kilogram: 78,
-    calories: 345,
-  },
-  {
-    day: "2020-03-7",
-    kilogram: 78,
-    calories: 234,
-  },
-  {
-    day: "2020-03-08",
-    kilogram: 77,
-    calories: 373,
-  },
-  {
-    day: "2020-03-09",
-    kilogram: 77,
-    calories: 233,
-  },
-  {
-    day: "2020-03-10",
-    kilogram: 77,
-    calories: 334,
-  },
-];
-
-function BarCharts({ styleName }) {
+function BarCharts({ data }) {
   const monthTickFormatter = (tick) => {
     const date = new Date(tick);
     return date.getDate();
@@ -76,7 +21,7 @@ function BarCharts({ styleName }) {
     if (active) {
       return (
         <div className="custom-tooltip">
-          <p>{`${payload[0].value}`}kg </p>
+          <p>{`${payload[0].value}`}kg</p>
           <p>{`${payload[1].value}`}Kcal</p>
         </div>
       );
@@ -88,7 +33,7 @@ function BarCharts({ styleName }) {
   return (
     <div className="bar_chart">
       <h2 className="bar_chart_title">Activité quotidienne</h2>
-      <ResponsiveContainer width="100%" height={220}>
+      <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data}>
           <CartesianGrid strokeDasharray="1 2" vertical={false} />
           <XAxis
@@ -97,14 +42,14 @@ function BarCharts({ styleName }) {
             axisLine={false}
             tickLine={false}
             tickSize={16}
-            tick={{ fill: "#9B9EAC", fontSize: 14 }}
+            tick={{ fill: '#9B9EAC', fontSize: 14 }}
           />
           <YAxis
             orientation="right"
             axisLine={false}
             tickLine={false}
             tickSize={24}
-            tick={{ fill: "#9B9EAC", fontSize: 14 }}
+            tick={{ fill: '#9B9EAC', fontSize: 14 }}
           />
           <Tooltip content={CustomTooltip} />
           <Legend
@@ -112,12 +57,12 @@ function BarCharts({ styleName }) {
             align="right"
             iconType="circle"
             iconSize="8px"
-            wrapperStyle={{ top:0, paddingBottom:"2em"}}
+            wrapperStyle={{ top: 0, paddingBottom: '2em' }}
             formatter={(value) => (
               <span className="bar_chart_legend">
-                {value === "kilogram"
-                  ? (value = "Poids(kg)")
-                  : (value = "Calories(kcal)")}
+                {value === 'kilogram'
+                  ? (value = 'Poids(kg)')
+                  : (value = 'Calories(kcal)')}
               </span>
             )}
           />

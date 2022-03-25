@@ -1,0 +1,28 @@
+.small_chart_radar {
+  background-color: #20253a;
+}
+
+.tick_radar {
+  fill: #ffff;
+  text-anchor: middle;
+  font-size: 12px;
+}
+
+.radar_chart {
+  width: 96%;
+  height: 98%;
+  margin: 1%;
+}
+.tick_radar {
+  text {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 1030px) {
+  .tick_radar {
+    text {
+      font-size: 0.5em;
+    }
+  }
+}
