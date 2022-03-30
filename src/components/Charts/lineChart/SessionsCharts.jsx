@@ -10,12 +10,14 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
+//replace date to weekday
 const tickFormatter = (tick) => {
   const weekDays = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
   const newTick = weekDays[tick - 1];
   return newTick;
 };
 
+//change the content and style of the tooltip
 const customTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     return (
@@ -28,11 +30,14 @@ const customTooltip = ({ active, payload }) => {
   return null;
 };
 
+//change the content and style of the legend
 const legendFormatter = () => {
   const value = 'Durée moyenne des sessions';
   return <span className="custom-legend">{value}</span>;
 };
 
+//Allows when tooltip active to transalte mouse position from chart width in percent
+// and change chart background color
 const trackMouse = (e) => {
   if (e.isTooltipActive) {
     const chartDom = document.querySelector('.session_chart');
@@ -44,6 +49,13 @@ const trackMouse = (e) => {
   }
 };
 
+/**
+ *Create line Charts with Rechart librairy rendering the user'average sessions
+ * @property {*} data needs to build the chart
+ * @example
+ * <SessionsCharts data={user.averageSessions}/>
+ * @returns React Component
+ */
 function SessionsCharts({ data }) {
   return (
     <div className="small_chart">
@@ -75,6 +87,7 @@ function SessionsCharts({ data }) {
               tick={{ fontSize: '12px', fill: '#FFFF', fontWeight: '500' }}
               tickFormatter={tickFormatter}
               interval="preserveStartEnd"
+              cursor="true"
             />
             <Line
               type="natural"

@@ -9,7 +9,15 @@ import {
 } from 'recharts';
 import './radar_chart.scss';
 
+/**
+ * Create radar Charts with Rechart librairy rendering the user'performance
+ * @property {*} data needs to build the chart
+ * @example
+ * <RadarCharts data={user.performance}/>
+ * @returns React Component
+ */
 function RadarCharts({ data }) {
+  //replace tick number(data.data.kind) to string(data.kind)
   const tickFormatter = (tick) => {
     const uppercaseTick = data.kind[tick].replace(
       /(?:^|\s|[-"'([{])+\S/g,
@@ -19,6 +27,7 @@ function RadarCharts({ data }) {
     return uppercaseTick;
   };
 
+  //modified tick position to match chart width
   class CustomizedAxisTick extends PureComponent {
     render() {
       const { x, y, payload } = this.props;
