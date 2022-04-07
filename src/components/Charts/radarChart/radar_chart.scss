@@ -9,7 +9,7 @@
 }
 
 .radar_chart {
-  width: 96%;
+  width: 100%;
   height: 98%;
   margin: 1%;
 }
@@ -19,10 +19,10 @@
   }
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1300px) {
   .tick_radar {
     text {
-      font-size: 0.5em;
+      font-size: 0.6em;
     }
   }
 }

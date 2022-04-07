@@ -6,7 +6,7 @@
   background-color: #fbfbfb;
   border-radius: 5px;
   z-index: 0;
-  stroke: '#DEDEDE';
+ 
 }
 
 .bar_chart_title {
@@ -48,14 +48,8 @@
   color: #74798c;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (max-height: 830px) {
   .bar_chart {
-    height: 250px;
-  }
-}
-
-@media screen and (max-width: 1020px) {
-  .bar_chart {
-    height: 150px;
+    height: 190px;
   }
 }

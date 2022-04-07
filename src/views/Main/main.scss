@@ -29,7 +29,7 @@
 }
 
 .user_content {
-  width: 83%;
+  width: 82%;
   margin-right: 3%;
 }
 
@@ -63,27 +63,55 @@
 }
 
 .small_chart {
-  width: 32%;
+  width: 30%;
   height: 100%;
   border-radius: 6px;
 }
 
-@media screen and (max-width: 1030px) {
+@media screen and (max-height: 800px) {
+
   .small_charts_container {
-    height: 220px;
+    height: 180px;
+  }
+  .greetings{
+    margin: 2% 0;
+  }
+  .user_content{
+    width: 88%;
+    margin-right: 1%;
   }
 }
+
+@media screen and (max-width:1300px) {
+
+  .small_charts_container {
+    height: 180px;
+  }
+  .greetings{
+    margin: 2% 0;
+  }
+  .user_content{
+    width: 88%;
+    margin-right: 1%;
+  }
+}
+
+
 
 @media screen and (min-width: 1400px) {
   .small_charts_container {
     height: 263px;
   }
+  .user_nutrition_container{
+    width: 18%;
+  }
+  .all_charts_container{
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 1600px) {
-  .small_charts_container {
-    height: 300px;
-  }
+  
   .greetings {
     margin: 3% 0;
   }
