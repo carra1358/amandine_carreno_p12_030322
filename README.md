@@ -39,6 +39,7 @@ Build an analytics dashboard with React
 - npm start
 
 ## Notes
+## Available Scripts
 
 In the project directory, you can run:
 
