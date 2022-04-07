@@ -2,16 +2,15 @@ import Icon from '../Icons/Icon';
 import './cards.scss';
 
 /**
- * card component with user nutrient intake
- *
+ * Card with user nutrient intake
  * @param {number} nutritionNumber amount of nutrient intake
  * @param {string} unit nutrient metric system
  * @param {string} unit nutrient's name
  * @param {string} src link to icon picture
  * @param {string} background icon's background color
  *
+ *@returns React class component
  */
-
 function Cards({ nutritionNumber, unit, category, src, background }) {
   return (
     <div className="cards">

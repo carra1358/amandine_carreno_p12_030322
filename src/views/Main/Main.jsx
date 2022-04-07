@@ -16,13 +16,17 @@ function Main() {
   const user = useContext(UserContext);
 
   // avoid trigering the render before receving  user datas
-  if (
-    user.summary === null ||
-    user.activity === null ||
-    user.performance === null ||
-    user.averageSession === null
-  ) {
-    return <div>Chargement</div>;
+  if (user.loading) {
+    return <div className="custom_message">Chargement</div>;
+  }
+  if (user.error) {
+    return (
+      <div className="custom_message">
+        Ooups!
+        <br />
+        Une erreur est survenue
+      </div>
+    );
   }
   return (
     <main className="user_content">

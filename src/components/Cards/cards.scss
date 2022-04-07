@@ -1,5 +1,5 @@
 .cards {
-  width: 100%;
+  width: 97%;
   height: 20%;
   border-radius: 5px;
   background-color: #fbfbfb;
@@ -21,7 +21,7 @@
   }
 }
 
-@media screen and (max-width: 1120px) {
+@media screen and (max-width: 1220px) {
   .user_nutrition {
     p:first-child {
       font-size: 18px;
@@ -32,3 +32,4 @@
     }
   }
 }
+

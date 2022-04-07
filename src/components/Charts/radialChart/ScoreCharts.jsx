@@ -7,7 +7,15 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
+/**
+ * Create radial Charts with Rechart librairy rendering the user'score
+ * @property {*} data needs to build the chart
+ * @example
+ * <ScoreCharts data={user.summary.todayScore}/>
+ * @returns React Component
+ */
 function ScoreCharts({ data }) {
+  // correct error of syntax data property
   const dataToUse = [
     {
       score: data.todayScore ? data.todayScore : data.score,

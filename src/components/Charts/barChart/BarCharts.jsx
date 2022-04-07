@@ -11,12 +11,20 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
+/**
+ * Create bar Charts with Rechart librairy rendering the user'activity
+ * @property {*} data needs to build the chart
+ * @example
+ * <BarCharts data={user.activity}/>
+ * @returns React Component
+ */
 function BarCharts({ data }) {
+  //replace date with only the day of the month
   const monthTickFormatter = (tick) => {
     const date = new Date(tick);
     return date.getDate();
   };
-
+  // change the content and style of the tooltip
   function CustomTooltip({ payload, active }) {
     if (active) {
       return (
@@ -39,19 +47,23 @@ function BarCharts({ data }) {
           <XAxis
             dataKey="day"
             tickFormatter={monthTickFormatter}
-            axisLine={false}
+            axisLine={{ stroke: '#DEDEDE' }}
             tickLine={false}
             tickSize={16}
             tick={{ fill: '#9B9EAC', fontSize: 14 }}
           />
           <YAxis
+            interval={1}
             orientation="right"
             axisLine={false}
             tickLine={false}
             tickSize={24}
             tick={{ fill: '#9B9EAC', fontSize: 14 }}
           />
-          <Tooltip content={CustomTooltip} />
+          <Tooltip
+            content={<CustomTooltip />}
+            cursor={{ fill: 'rgba(196, 196, 196, 0.5)' }}
+          />
           <Legend
             verticalAlign="top"
             align="right"

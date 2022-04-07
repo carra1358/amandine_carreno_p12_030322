@@ -1,12 +1,19 @@
 .vertical_bar {
-  width: 10%;
-  height: 95vh;
+  width: 6%;
+  height: 91vh;
   margin: 0;
   background-color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+}
+
+.second_nav {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .copyright_text {
@@ -14,6 +21,6 @@
   color: white;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
-  margin-bottom: 164px;
-  margin-top: 59px;
+  height: 30%;
 }
+
