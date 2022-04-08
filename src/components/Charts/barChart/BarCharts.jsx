@@ -43,7 +43,7 @@ function BarCharts({ data }) {
       <h2 className="bar_chart_title">Activité quotidienne</h2>
       <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data}>
-          <CartesianGrid strokeDasharray="1 2" vertical={false} />
+          <CartesianGrid strokeDasharray="2 1" vertical={false} />
           <XAxis
             dataKey="day"
             tickFormatter={monthTickFormatter}

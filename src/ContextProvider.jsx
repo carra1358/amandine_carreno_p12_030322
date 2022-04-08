@@ -9,9 +9,10 @@ import useFetch from 'hooks/useFetch';
 const UserContext = createContext();
 
 /**
- * Context provider that allows children components to share values
+ * Context Provider use at the top of our component tree that allows childrens components to share values
  * @property {Component} children components that will be enclosed in the context provider
  * @property {Object} value built-in prop that accept the value we want to share, in ours case an object "user" filled with our data
+ * 
  * @returns React component
  */
 const UserContextProvider = ({ children }) => {

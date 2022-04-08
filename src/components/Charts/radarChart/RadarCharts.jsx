@@ -75,7 +75,7 @@ function RadarCharts({ data }) {
       <div className="radar_chart">
         <ResponsiveContainer width="100%" height="100%">
           <RadarChart
-            cx="48%"
+            cx="47%"
             cy="50%"
             data={data.data}
             outerRadius="75%"
