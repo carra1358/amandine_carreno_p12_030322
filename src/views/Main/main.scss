@@ -1,0 +1,118 @@
+.main_content {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.custom_message {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  text-align: center;
+}
+.greetings {
+  margin: 5% 0;
+  h1 {
+    font-size: 48px;
+    margin-bottom: 0.2em;
+  }
+  .greettings_name {
+    color: #ff0101;
+  }
+}
+
+.greetings_message {
+  margin: 0;
+  font-size: 18px;
+}
+
+.user_content {
+  width: 82%;
+  margin-right: 3%;
+}
+
+.user_stats {
+  display: flex;
+  justify-content: space-between;
+}
+
+.all_charts_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 76%;
+  color: rgb(6, 8, 8);
+}
+
+.user_nutrition_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 23%;
+}
+
+.small_charts_container {
+  width: 100%;
+  margin-top: 2%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.small_chart {
+  width: 30%;
+  height: 100%;
+  border-radius: 6px;
+}
+
+@media screen and (max-height: 800px) {
+
+  .small_charts_container {
+    height: 180px;
+  }
+  .greetings{
+    margin: 2% 0;
+  }
+  .user_content{
+    width: 88%;
+    margin-right: 1%;
+  }
+}
+
+@media screen and (max-width:1300px) {
+
+  .small_charts_container {
+    height: 180px;
+  }
+  .greetings{
+    margin: 2% 0;
+  }
+  .user_content{
+    width: 88%;
+    margin-right: 1%;
+  }
+}
+
+
+
+@media screen and (min-width: 1400px) {
+  .small_charts_container {
+    height: 263px;
+  }
+  .user_nutrition_container{
+    width: 18%;
+  }
+  .all_charts_container{
+    width: 80%;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  
+  .greetings {
+    margin: 3% 0;
+  }
+}

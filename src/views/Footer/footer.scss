@@ -1,0 +1,26 @@
+.vertical_bar {
+  width: 6%;
+  height: 91vh;
+  margin: 0;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.second_nav {
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.copyright_text {
+  font-size: 12px;
+  color: white;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  height: 30%;
+}
+
